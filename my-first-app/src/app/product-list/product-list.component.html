@@ -11,5 +11,7 @@
   <!-- 상품 공유 버튼 -->
   <button (click)="Share(product)">Share</button>
   <!-- 상품 알림 버튼 -->
-  <app-product-alerts [product]="product">Notify</app-product-alerts>
+  <app-product-alerts [product]="product" (notify)="Notify(product)"
+    >Notify</app-product-alerts
+  >
 </div>
