@@ -1,6 +1,11 @@
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details'">{{ product.name }}</a>
+    <!-- 상품 타이틀 : 클릭 시 상세 정보 페이지로 이동 -->
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+      >{{ product.name }}</a
+    >
   </h3>
 
   <!-- 상품 설명 -->
